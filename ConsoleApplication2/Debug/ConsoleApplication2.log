@@ -1,0 +1,30 @@
+﻿  NodoA.cpp
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(13): error C2143: syntax error: missing ';' before '<'
+  c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(34): note: see reference to class template instantiation 'IteratorB<T>' being compiled
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(13): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(15): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(15): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\iteratorb.h(17): error C2061: syntax error: identifier 'Arbol'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(15): error C2143: syntax error: missing ';' before '<'
+  c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(38): note: see reference to class template instantiation 'Arbol<T>' being compiled
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(15): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(21): error C2061: syntax error: identifier 'NodoA'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(25): error C2061: syntax error: identifier 'NodoA'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(29): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(29): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(31): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(31): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(33): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(33): error C2238: unexpected token(s) preceding ';'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(35): error C2143: syntax error: missing ';' before '<'
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\selen\documents\visual studio 2015\projects\consoleapplication2\consoleapplication2\arbol.h(35): error C2238: unexpected token(s) preceding ';'
