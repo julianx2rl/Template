@@ -1,3 +1,12 @@
+/**
+* @file Nodo.h
+* @version 1.0
+* @date 26 / 06 / 2016
+* @author Julian Arguedas Torres B50587
+* @title Clase Nodo
+* @brief
+*/
+
 #pragma once
 #include "stdafx.h"
 #include "Nodo.h"
@@ -10,24 +19,74 @@ class Nodo {
 
 private:
 
+	template<class T>
+	friend ostream& operator<<(ostream&, Nodo<T>&);
+
 public:
 	
-
+	/**
+	* @param Hijo del Nodo
+	*/
 	Nodo<T>* hijo;
 
+	/**
+	* @brief Valor que contiene el nodo
+	*/
 	T numero;
 
-	Nodo();
+	/**
+	* @brief Constructor por defecto del Nodo
+	*/
+	Nodo() {
+		numero = NULL;
+	}
 
-	Nodo(T);
+	/**
+	* @brief Constructor con valor del Nodo
+	*/
+	Nodo(T numeral) {
+		numero = numeral;
+	}
 
-	~Nodo();
+	/**
+	* @brief Destructor por defecto del Nodo
+	*/
+	~Nodo() {
+	}
 
-	void agrega(T);
+	/**
+	* @brief Le da un hijo con valor al nodo
+	*/
+	void agrega(T numero) {
+		this->hijo = new Nodo(numero);
+	}
 
-	void agrega(Nodo<T>*);
+	/**
+	* @brief Le da un hijo directamente al nodo
+	*/
+	void agrega(Nodo<T>* numero) {
+		this->hijo = numero;
+	}
 
-	T valor();
+	/**
+	* @brief Retorna el valor del nodo
+	*/
+	T valor() {
+		T j = this->numero;
+		return j;
+	}
 
-	Nodo<T>* descendiente();
+	/**
+	* @brief Retorna el hijo del nodo
+	*/
+	Nodo<T>* descendiente() {
+		T j = this->hijo;
+		return j;
+	}
 };
+
+template<class T>
+ostream & operator<<(ostream & out, Nodo<T> & a) {
+	//a.imprimir(a.raiz, out, 0);
+	//return out;
+}

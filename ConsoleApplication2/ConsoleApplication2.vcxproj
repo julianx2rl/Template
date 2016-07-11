@@ -160,16 +160,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arbol.cpp" />
-    <ClCompile Include="array.cpp" />
-    <ClCompile Include="Enlazada.cpp" />
-    <ClCompile Include="Iterator.cpp" />
-    <ClCompile Include="IteratorA.cpp" />
-    <ClCompile Include="IteratorB.cpp" />
-    <ClCompile Include="IteratorL.cpp" />
-    <ClCompile Include="Lista.cpp" />
-    <ClCompile Include="Nodo.cpp" />
-    <ClCompile Include="NodoA.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

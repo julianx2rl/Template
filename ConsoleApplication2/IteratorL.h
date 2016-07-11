@@ -1,3 +1,12 @@
+/**
+* @file IteratorL.h
+* @version 1.0
+* @date 26 / 06 / 2016
+* @author Julian Arguedas Torres B50587
+* @title Clase IteratorL
+* @brief
+*/
+
 #pragma once
 #include "stdafx.h"
 #include "Iterator.h"
@@ -8,27 +17,105 @@ class IteratorL : public Iterator<T> {
 
 private:
 
+	template<class T>
+	friend ostream& operator<<(ostream&, IteratorL<T>&);
+
 public:
 
+	/**
+	* @param actual: Nodo actual del Iterador
+	* @param busqueda: la lista Array del iterador
+	*/
 	Nodo<T>* actual;
-
 	Enlazada<T>* busqueda;
 
-	IteratorL(Enlazada<T>*);
+	/**
+	* @brief Constructor defecto del Iterador
+	*/
+	IteratorL(Enlazada<T>* listo) : Iterator(listo) {
+		this->busqueda = listo;
+		this->actual = (busqueda)->primero;
+	}
 
-	Iterator<T>* operator=(T);
+	/**
+	* @brief Destructor defecto del Iterador
+	*/
+	~IteratorL() {
+	}
 
-	Iterator<T>* operator++();
+	/**
+	* @brief Iguala el valor actual
+	*/
+	Iterator<T>* operator=(T otra) {
+		this->actual->numero = otra;
+	}
 
-	Iterator<T>* operator++(T);
+	/**
+	* @brief Avanza un expacio
+	*/
+	Iterator<T>* operator++() {
+		Nodo* tmp = actual;
+		++posicion;
+		this->actual = (tmp)->hijo;
+	}
 
-	Iterator<T>* operator--();
+	/**
+	* @brief Avanza un expacio
+	*/
+	Iterator<T>* operator++(T dummie) {
+		Nodo* tmp = actual;
+		++posicion;
+		this->actual = (tmp)->hijo;
+	}
 
-	Iterator<T>* operator--(T);
+	/**
+	* @brief Retrocede un expacio
+	*/
+	Iterator<T>* operator--() {
+		this->actual = busqueda->primero;
+		for (int i = 0; i < posicion; ++i) {
+			Nodo* tmp = actual;
+			this->actual = (tmp)->hijo;
+		}
+		--posicion;
+	}
 
-	T operator*();
+	/**
+	* @brief Retrocede un expacio
+	*/
+	Iterator<T>* operator--(T dummie) {
+		this->actual = busqueda->primero;
+		for (int i = 0; i < posicion; ++i) {
+			Nodo* tmp = actual;
+			this->actual = (tmp)->hijo;
+		}
+		--posicion;
+	}
 
-	bool operator==(Iterator<T>*);
+	/**
+	* @brief Determina si el valor en el Iterador y otro son iguales
+	*/
+	bool operator==(Iterator<T>* dummie) {
+		bool equal = false;
+		if (this == dummie) {
+			equal = true;
+		}
+		else {
+			equal = false;
+		}
+		return equal;
+	}
 
-	~IteratorL();
+	/**
+	* @brief obtiene el valor del expacio
+	*/
+	T operator*() {
+		T num = (this->actual)->numero;
+		return num;
+
+	}
 };
+
+template<class T>
+ostream & operator<<(ostream & out, IteratorL<T> & otra) {
+}

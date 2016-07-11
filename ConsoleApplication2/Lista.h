@@ -1,3 +1,12 @@
+/**
+* @file Lista.h
+* @version 1.0
+* @date 26 / 06 / 2016
+* @author Julian Arguedas Torres B50587
+* @title Clase Lista
+* @brief
+*/
+
 #pragma once
 #include "stdafx.h"
 #include "Nodo.h"
@@ -7,25 +16,41 @@ template<class T>
 class Lista {
 
 	template<class T>
-	friend ostream & operator<<(ostream &, Lista &);
+	friend ostream & operator<<(ostream &, Lista<T> &);
 
 private:
 
 public:
 	
-	Lista();
+	/**
+	* @brief Constructor por defecto de la lista
+	*/
+	Lista() {
+	}
 
-	virtual ~Lista();
+	/**
+	* @brief Destructor por defecto de la lista
+	*/
+	virtual ~Lista() {
+	}
 
-	virtual void imprimir();
+	/**
+	* @brief Imprime todos los valores de los nodos
+	*/
+	virtual void imprimir() {
+	}
 
-	virtual void agrega(T);
+	/**
+	* @brief Agrega un nuevo nodo a la lista
+	*/
+	virtual void agrega(T) {
+	}
 
-	virtual void borrar(int);
-
-	// virtual void iterator();
-
-	// virtual void finale();
+	/**
+	* @brief Borra un Nodo en la posicion dada
+	*/
+	virtual void borrar(int) {
+	}
 };
 
 template<class T>

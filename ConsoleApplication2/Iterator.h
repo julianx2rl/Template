@@ -1,3 +1,12 @@
+/**
+* @file Iterator.h
+* @version 1.0
+* @date 26 / 06 / 2016
+* @author Julian Arguedas Torres B50587
+* @title Clase Iterator
+* @brief
+*/
+
 #pragma once
 #include "stdafx.h"
 #include "Array.h"
@@ -8,38 +17,124 @@ using namespace std;
 
 template<class T>
 class Iterator {
-
-	template<class T>
-	friend ostream & operator<<(ostream &, Iterator<T> &);
-
 protected:
 
-	virtual Iterator& preincremento() = 0;
-	virtual Iterator& postincremento(T) = 0;
-	virtual Iterator& predisminución() = 0;
-	virtual Iterator& postdisminución(T) = 0;
-	virtual bool igualdad(Iterator<T>*) = 0;
-	virtual int desreferenciacion() = 0;
-	virtual Iterator& cambio(int) = 0;
+	/**
+	* @brief Avanza un expacio
+	*/
+
+	Iterator&<T> preincremento() {
+		this->operator++();
+	}
+
+	/**
+	* @brief Avanza un expacio
+	*/
+	Iterator&<T> postincremento(T dummie) {
+		this->operator++(dummie);
+	}
+
+	/**
+	* @brief Retrocede un expacio
+	*/
+	Iterator&<T> predisminución() {
+		this->operator--();
+	}
+
+	/**
+	* @brief Retrocede un expacio
+	*/
+	Iterator&<T> postdisminución(T dummie) {
+		this->operator--(dummie);
+	}
+
+	/**
+	* @brief Cambia el valor de la posicion actual del Iterador
+	*/
+	Iterator&<T> cambio(T dummie) {
+		this->operator=(dummie);
+	}
+
+	/**
+	* @brief obtiene el valor del expacio
+	*/
+	T desreferenciacion() {
+		this->operator*();
+	}
+
+	/**
+	* @brief Determina si el valor en el Iterador y otro son iguales
+	*/
+	bool igualdad(Iterator<T>* dummie) {
+		this->operator==(dummie);
+	}
 
 public:
 
+	/**
+	* @param La lista del iterador
+	*/
+
 	Lista<T>* lista;
+
+	/**
+	* @param Posicion actual del nodo
+	*/
 
 	int posicion;
 
-	Iterator(Lista<T>*);
+	/**
+	* @brief Constructor defecto del Iterador
+	*/
+	Iterator(Lista<T>* listo) {
+		this->lista = listo;
+	}
 
-	~Iterator();
+	/**
+	* @brief Destructor defecto del Iterador
+	*/
+	~Iterator() {
+	}
 
-	Iterator<T>* operator=(T);
-	Iterator<T>* operator++();
-	Iterator<T>* operator++(T);
-	Iterator<T>* operator--();
-	Iterator<T>* operator--(T);
-	int operator*();
-	bool operator==(Iterator*);
+	/**
+	* @brief Metodo virtual para avanzar un expacio
+	*/
+	Iterator<T>* operator++() {
+	}
+
+	/**
+	* @brief Metodo virtual para avanzar un expacio
+	*/
+	Iterator<T>* operator++(T dummie) {
+	}
+
+	/**
+	* @brief Metodo virtual para retrorceder un expacio
+	*/
+	Iterator<T>* operator--() {
+	}
+
+	/**
+	* @brief Metodo virtual para retrorceder un expacio
+	*/
+	Iterator<T>* operator--(T dummie) {
+	}
+
+	/**
+	* @brief Metodo virtual para igualar valor actual
+	*/
+	Iterator<T>* operator=(T otra) {
+	}
+
+	/**
+	* @brief Metodo virtual para desreferenciar
+	*/
+	T operator*() {
+	}
+
+	/**
+	* @brief Metodo virtual para determinar igualdad
+	*/
+	bool operator==(Iterator<T>* dummie) {
+	}
 };
-
-template<class T>
-ostream & operator<<(ostream &, Iterator<T> &);
